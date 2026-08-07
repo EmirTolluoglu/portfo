@@ -107,8 +107,8 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 border-b border-[rgba(0,240,255,0.1)] backdrop-blur-xl transition-all duration-300 bg-[rgba(5,5,5,0.8)]">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div>
-            <Image src="emirtolluoglu.com/emir.png" alt="sfdaf" width={64} height={64}/>
+          <div className="flex">
+            <Image src="/emir.png" alt="sfdaf" width={64} height={64}/>
             
             <span className="ml-8">
             <a
@@ -174,89 +174,126 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        id="home"
-        className="min-h-screen flex items-center relative pt-20 z-10"
-      >
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl">
-            <div className="fade-in inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-pulse" />
-              <span className="text-[#00f0ff] text-sm font-medium">
-                Available for Opportunities
-              </span>
-            </div>
-            <h1
-              className="fade-in font-bold text-5xl md:text-7xl leading-tight mb-6"
-              style={{ transitionDelay: "0.1s" }}
-            >
-              Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-[#00f0ff] via-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
-                Emir Tolluoğlu
-              </span>
-            </h1>
-            <p
-              className="fade-in text-[#8892b0] text-lg md:text-xl max-w-2xl leading-relaxed mb-8"
-              style={{ transitionDelay: "0.2s" }}
-            >
-              Full-stack developer, robotics enthusiast, and builder of digital
-              experiences. Currently crafting web solutions at{" "}
-              <span className="text-[#00f0ff]">GreaTR</span>. Passionate about
-              code, design, and pushing boundaries. Building with{" "}
-              <span className="text-[#00f0ff]">Next.js</span>,{" "}
-              <span className="text-[#00f0ff]">TypeScript</span>,{" "}
-              <span className="text-[#00f0ff]">React</span> &{" "}
-              <span className="text-[#00f0ff]">Tailwind CSS</span>.
-            </p>
-            <div
-              className="fade-in flex gap-4 mb-12"
-              style={{ transitionDelay: "0.3s" }}
-            >
-              <a
-                href="https://github.com/EmirTolluoglu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
-              >
-                {/* <Github size={20} /> */}
-              </a>
-              <a
-                href="https://www.linkedin.com/in/emir-tolluoglu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
-              >
-                {/* <Linkedin size={20} /> */}
-              </a>
-              <a
-                href="mailto:emir.tolluoglu@example.com"
-                className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-            <div
-              className="fade-in flex flex-wrap gap-8 md:gap-12"
-              style={{ transitionDelay: "0.4s" }}
-            >
-              {[
-                { num: "8+", label: "Years Coding" },
-                { num: "5", label: "AP Scores" },
-                { num: "2M+", label: "App Downloads" },
-                { num: "10+", label: "Projects" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="font-bold text-3xl md:text-4xl bg-gradient-to-r from-[#00f0ff] to-[#8b5cf6] bg-clip-text text-transparent">
-                    {stat.num}
-                  </div>
-                  <div className="text-[#5a6478] text-xs uppercase tracking-widest mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+  id="home"
+  className="min-h-screen flex items-center relative pt-20 z-10"
+>
+  <div className="container mx-auto px-6">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Sol Taraf */}
+      <div className="max-w-4xl">
+        <div className="fade-in inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg mb-8">
+          <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-pulse" />
+          <span className="text-[#00f0ff] text-sm font-medium">
+            Available for Opportunities
+          </span>
         </div>
-      </section>
+
+        <h1
+          className="fade-in font-bold text-5xl md:text-7xl leading-tight mb-6"
+          style={{ transitionDelay: "0.1s" }}
+        >
+          Hi, I&apos;m{" "}
+          <span className="bg-gradient-to-r from-[#00f0ff] via-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
+            Emir Tolluoğlu
+          </span>
+        </h1>
+
+        <p
+          className="fade-in text-[#8892b0] text-lg md:text-xl max-w-2xl leading-relaxed mb-8"
+          style={{ transitionDelay: "0.2s" }}
+        >
+          Full-stack developer, robotics enthusiast, and builder of digital
+          experiences. Currently crafting web solutions at{" "}
+          <span className="text-[#00f0ff]">GreaTR</span>. Passionate about
+          code, design, and pushing boundaries. Building with{" "}
+          <span className="text-[#00f0ff]">Next.js</span>,{" "}
+          <span className="text-[#00f0ff]">TypeScript</span>,{" "}
+          <span className="text-[#00f0ff]">React</span> &{" "}
+          <span className="text-[#00f0ff]">Tailwind CSS</span>.
+        </p>
+
+        <div
+          className="fade-in flex gap-4 mb-12"
+          style={{ transitionDelay: "0.3s" }}
+        >
+          <a
+            href="https://github.com/EmirTolluoglu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
+          >
+            {/* <Github size={20} /> */}
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/emir-tolluoglu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
+          >
+            {/* <Linkedin size={20} /> */}
+          </a>
+
+          <a
+            href="mailto:emir.tolluoglu@example.com"
+            className="w-12 h-12 flex items-center justify-center border border-[rgba(0,240,255,0.1)] rounded-xl text-[#8892b0] transition-all hover:border-[#00f0ff] hover:text-[#00f0ff] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,240,255,0.1)] bg-[rgba(15,15,25,0.6)] backdrop-blur-lg"
+          >
+            <Mail size={20} />
+          </a>
+        </div>
+
+        <div
+          className="fade-in flex flex-wrap gap-8 md:gap-12"
+          style={{ transitionDelay: "0.4s" }}
+        >
+          {[
+            { num: "8+", label: "Years Coding" },
+            { num: "5", label: "AP Scores" },
+            { num: "2M+", label: "App Downloads" },
+            { num: "10+", label: "Projects" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="font-bold text-3xl md:text-4xl bg-gradient-to-r from-[#00f0ff] to-[#8b5cf6] bg-clip-text text-transparent">
+                {stat.num}
+              </div>
+              <div className="text-[#5a6478] text-xs uppercase tracking-widest mt-1">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Sağ Taraf */}
+      <div className="flex justify-center mt-12 lg:mt-0">
+        <div className="relative group">
+          {/* Glow */}
+          <div className="absolute -inset-5 rounded-[40px] bg-gradient-to-r from-cyan-500/30 via-purple-500/20 to-blue-500/30 blur-3xl group-hover:blur-[70px] transition-all duration-500"></div>
+
+          <Image
+            src="/emirana.jpeg"
+            alt="Emir Tolluoğlu"
+            width={450}
+            height={550}
+            priority
+            className="
+              relative
+              rounded-[32px]
+              object-cover
+              border
+              border-cyan-400/20
+              shadow-[0_20px_80px_rgba(0,240,255,0.25)]
+              transition-all
+              duration-500
+              hover:scale-105
+              hover:-rotate-1
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* About */}
       <section id="about" className="py-24 relative z-10">
