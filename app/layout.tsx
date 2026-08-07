@@ -30,11 +30,8 @@ export const metadata: Metadata = {
     "Web Developer",
     "Software Engineer"
   ],
-
   authors: [{ name: "Emir Tolluoğlu" }],
-
   creator: "Emir Tolluoğlu",
-
   robots: {
     index: true,
     follow: true
@@ -46,12 +43,9 @@ export const metadata: Metadata = {
 
   openGraph: {
   title: "Emir Tolluoğlu | Full Stack Developer",
-
   description:
     "Portfolio of Emir Tolluoğlu. Next.js, React, TypeScript and Robotics.",
-
   url: "https://emirtolluoglu.com",
-
   siteName: "Emir Tolluoğlu",
 
   images: [
@@ -62,9 +56,7 @@ export const metadata: Metadata = {
       alt: "Emir Tolluoğlu Portfolio"
     }
   ],
-
   locale: "en_US",
-
   type: "website"
 },
 
@@ -95,22 +87,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">{children}</body>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Emir Tolluoğlu",
-            url: "https://domain.com",
-            jobTitle: "Full Stack Developer",
-            sameAs: [
-              "https://github.com/EmirTolluoglu",
-              "https://linkedin.com/in/emir-tolluoglu",
-            ],
-          }),
-        }}
-      />
+      
     </html>
   );
 }
