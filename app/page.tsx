@@ -107,9 +107,26 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 border-b border-[rgba(0,240,255,0.1)] backdrop-blur-xl transition-all duration-300 bg-[rgba(5,5,5,0.8)]">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-[#00f0ff] via-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent">
-            ET.
-          </span>
+          <div>
+            <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-[#00f0ff] via-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent">
+              ET.
+            </span>
+            <div>
+            <a
+              href="/emirkisa.pdf"
+              download="emirkisa.pdf"
+              className="cvButton"
+            >
+              <span>CV İNDİR</span>
+
+              <i className="corner top-left" />
+              <i className="corner top-right" />
+              <i className="corner bottom-left" />
+              <i className="corner bottom-right" />
+            </a>
+            </div>
+          </div>
+
           <button
             className="lg:hidden text-white"
             onClick={() => setMobileOpen(!mobileOpen)}

@@ -24,3 +24,103 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.cvButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 42px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(18, 18, 20, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  backdrop-filter: blur(12px);
+  transition: all .35s ease;
+  box-shadow:
+    0 0 20px rgba(0,255,255,.08),
+    inset 0 0 10px rgba(255,255,255,.04);
+}
+
+.cvButton span {
+  position: relative;
+  z-index: 2;
+}
+
+.cvButton::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(0,255,255,.25),
+    transparent 80%
+  );
+  transform: rotate(25deg);
+  animation: shine 4s linear infinite;
+}
+
+.cvButton:hover {
+  transform: translateY(-5px) scale(1.04);
+  border-color: #00ffff;
+  box-shadow:
+    0 0 20px #00ffff66,
+    0 0 45px #00ffff55,
+    inset 0 0 15px #00ffff22;
+}
+
+.corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transition: .35s ease;
+}
+
+.top-left {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid #00ffff;
+  border-left: 2px solid #00ffff;
+}
+
+.top-right {
+  top: 8px;
+  right: 8px;
+  border-top: 2px solid #00ffff;
+  border-right: 2px solid #00ffff;
+}
+
+.bottom-left {
+  bottom: 8px;
+  left: 8px;
+  border-bottom: 2px solid #00ffff;
+  border-left: 2px solid #00ffff;
+}
+
+.bottom-right {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 2px solid #00ffff;
+  border-right: 2px solid #00ffff;
+}
+
+.cvButton:hover .corner {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 8px #00ffff);
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  to {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
