@@ -108,10 +108,9 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 border-b border-[rgba(0,240,255,0.1)] backdrop-blur-xl transition-all duration-300 bg-[rgba(5,5,5,0.8)]">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div>
-            <span className="font-bold text-2xl tracking-tight bg-gradient-to-r from-[#00f0ff] via-[#8b5cf6] to-[#3b82f6] bg-clip-text text-transparent">
-              ET.
-            </span>
-            <div>
+            <Image src="emirtolluoglu.com/emir.png" alt="sfdaf" width={64} height={64}/>
+            
+            <span className="ml-8">
             <a
               href="/emirkisa.pdf"
               download="emirkisa.pdf"
@@ -124,7 +123,7 @@ export default function Home() {
               <i className="corner bottom-left" />
               <i className="corner bottom-right" />
             </a>
-            </div>
+            </span>
           </div>
 
           <button
