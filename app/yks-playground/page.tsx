@@ -33,6 +33,7 @@ const OTHER_YEARS = ["2025", "2024", "2023", "2022"];
 // Easter egg ön ayarları
 const EGG_PRESETS: { obp: number; tyt: Scores; ayt: Scores }[] = [
   {
+    
     obp: 90.02,
     tyt: { 1: [38, 2], 2: [16, 4], 3: [35, 3], 4: [20, 0] },
     ayt: { 12: [36, 1], 13: [14, 0], 14: [13, 0], 15: [13, 0] },
