@@ -4,7 +4,7 @@ export async function POST(req: NextRequest) {
   const body = await req.text();
 
   try {
-    const upstream = await fetch(`${process.env.YKS_PROXY_URL}/api/calculate`, {
+    const upstream = await fetch(`${process.env.YKS_PROXY_URL}/api/yks-playground/calculate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
