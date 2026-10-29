@@ -26,9 +26,8 @@ const MAX_BODY = 8_000; // bayt, kötü niyetli büyük istekleri kes
 const ALLOWED = new Set([
   "kusme-seviyesi",
   "durusma",
-  "denemeler",
+  "iskaladi",
   "affetti",
-  "kuponlar",
   "final",
 ]);
 
